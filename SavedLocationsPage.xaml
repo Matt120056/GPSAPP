@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GPSApp.SavedLocationsPage">
+    <StackLayout>
+        <Label Text="Saved Locations" 
+               FontSize="20"
+               HorizontalOptions="Center" />
+        <ListView ItemsSource="{Binding SavedLocations}" 
+                  SelectedItem="{Binding SelectedLocation}"
+                  ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding location}" />
+                            <Label Text="{Binding timestampString}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

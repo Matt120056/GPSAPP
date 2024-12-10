@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GPSApp</name>
+    </assembly>
+    <members>
+        <member name="M:GPSApp.DatabaseHelper.GetLocationsAsync">
+            <summary>
+            Simulate database retrieval for saved locations
+            </summary>
+        </member>
+        <member name="M:GPSApp.DatabaseHelper.AddLocationAsync(System.Double,System.Double)">
+            <summary>
+            Simulate saving a new location into the mock database
+            </summary>
+        </member>
+        <member name="M:GPSApp.MainPage.OnSaveLocationClicked(System.Object,System.EventArgs)">
+            <summary>
+            Trigger saving manually entered latitude and longitude into database
+            </summary>
+        </member>
+        <member name="T:GPSApp.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+    </members>
+</doc>
