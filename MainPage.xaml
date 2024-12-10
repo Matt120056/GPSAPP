@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             x:Class="GPSApp.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Text="Saved Locations"
+            Clicked="OnViewSavedLocationsClicked"
+            IconImageSource="icon_saved_locations.png" />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <!-- Map that will show user's location and saved locations -->
+        <maps:Map x:Name="map" HeightRequest="400" />
+
+        <!-- Manual Latitude and Longitude Input -->
+        <StackLayout Padding="10" VerticalOptions="End">
+            <Label Text="Enter Latitude:" />
+            <Entry x:Name="entryLatitude" Placeholder="e.g. 37.7749" Keyboard="Numeric" />
+
+            <Label Text="Enter Longitude:" />
+            <Entry x:Name="entryLongitude" Placeholder="e.g. -122.4194" Keyboard="Numeric" />
+
+            <!-- Save button -->
+            <Button Text="Save Entered Location"
+                    Clicked="OnSaveLocationClicked"
+                    BackgroundColor="LightBlue"
+                    TextColor="White" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
